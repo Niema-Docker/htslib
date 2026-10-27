@@ -9,5 +9,5 @@ RUN apk update && \
     ./configure && \
     make install && \
     cd .. && \
-    rm -rf htslib-* && \
-    ldconfig
+    rm -rf htslib-*
+ENV LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
